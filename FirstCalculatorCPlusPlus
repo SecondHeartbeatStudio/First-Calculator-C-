@@ -1,12 +1,17 @@
 #include <iostream>
 using namespace std;
 int main() {
+  // declare double
   double num1, num2, num3;
+  // declare char
   char symbol;
+  // print
   cout << "Enter Equation: ";
+  //take input and feed into
   cin >> num1;
   cin >> symbol;
   cin >> num2;
+  // checks what symbol is to do equation
   if (symbol == '*')
     num3 = num1 * num2;
   else if (symbol == '/')
@@ -15,9 +20,15 @@ int main() {
     num3 = num1 + num2;
   else if (symbol == '-')
     num3 = num1 - num2;
-  else {
-    cout << "Invalid Equation";
-    }
+  else
+    cout << "Invalid Equation\n";
+  if (num3 >= 100) {
+    cout << "Loading";
+    for (int i = 0; i <3; ++i)
+      cout << ".";
+    cout << "\n";
+  }
+  // prints final number
   cout << num3;
   return 0;
   }
