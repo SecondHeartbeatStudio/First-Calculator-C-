@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 using namespace std;
 int main() {
   // declare double
@@ -24,12 +25,11 @@ int main() {
       num3 = num1 - num2;
     else
       cout << "Invalid Equation\n";
-    if (num2 == 0.0) {
-      if (symbol == '/')
-        cout << "ERROR Devided By Zero";
-        }
-    else
+      //checks if infinite
+    if (num3 == num3 && num3 - 1 == num3)
+      cout << "Devided By Zero";
       //prints answer
+    else
       cout << "Answer is: " << num3;
    }
   return 0;
