@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+  double num1, num2, num3;
+  char symbol;
+  cout << "Enter Equation: ";
+  cin >> num1;
+  cin >> symbol;
+  cin >> num2;
+  if (symbol == '*')
+    num3 = num1 * num2;
+  else if (symbol == '/')
+    num3 = num1 / num2;
+  else if (symbol == '+')
+    num3 = num1 + num2;
+  else if (symbol == '-')
+    num3 = num1 - num2;
+  else {
+    cout << "Invalid Equation";
+    }
+  cout << num3;
+  return 0;
+  }
