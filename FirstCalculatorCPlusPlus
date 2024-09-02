@@ -1,5 +1,4 @@
 #include <iostream>
-#include <limits>
 using namespace std;
 int main() {
   // declare double
@@ -15,22 +14,26 @@ int main() {
     cin >> symbol;
     cin >> num2;
     // checks what symbol is to do equation
-    if (symbol == '*')
-      num3 = num1 * num2;
-    else if (symbol == '/')
-      num3 = num1 / num2;
-    else if (symbol == '+')
-      num3 = num1 + num2;
-    else if (symbol == '-')
-      num3 = num1 - num2;
-    else
-      cout << "Invalid Equation\n";
-      //checks if infinite
-    if (num3 == num3 && num3 - 1 == num3)
-      cout << "Devided By Zero";
+    switch (symbol) {
+      case '*':
+        cout << "Answer: " << (num1 * num2);
+        break;
+      case '/':
+        if (num2 == 0)
+          cout << "Devided By Zero";
+        else
+          cout << "Answer: " << (num1 / num2);
+        break;
+      case '+':
+        cout << "Answer: " << (num1 + num2);
+        break;
+      case '-':
+        cout << "Answer: " << (num1 - num2);
+        break;
+      default:
+        cout << "Invalid Operator";
+      }
       //prints answer
-    else
-      cout << "Answer is: " << num3;
    }
   return 0;
   }
